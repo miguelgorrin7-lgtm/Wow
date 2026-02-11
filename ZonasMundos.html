@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="ZonasMundos.css" />
+  <title>Mundo / Zonas</title>
+
+  <style>
+    body {
+      font-family: 'Cinzel', serif;
+      background: radial-gradient(circle at top, #1c2b3a, #0b0f14);
+      color: #f5e6b3;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 30px 0 20px;
+      color: #d4af37;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    h2 {
+      margin: 30px 0 15px;
+      color: #e0c068;
+    }
+
+    button {
+      background: linear-gradient(to bottom, #3b2a14, #1a1107);
+      border: 2px solid #c9aa71;
+      color: #f5e6b3;
+      padding: 10px 18px;
+      font-size: 16px;
+      font-family: 'Cinzel', serif;
+      cursor: pointer;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(201,170,113,0.3);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to bottom, #5a3d1e, #2a1a0d);
+      box-shadow: 0 0 15px rgba(255,215,100,0.7);
+      transform: scale(1.05);
+    }
+
+    img {
+      margin: 30px 0;
+      border: 3px solid #c9aa71;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    }
+
+    h3 {
+      margin: 25px 0 10px;
+      color: #c9aa71;
+      font-size: 20px;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 4px #000;
+      position: relative;
+    }
+
+    h3::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 2px;
+      margin: 6px auto 0;
+      background: linear-gradient(to right, transparent, #c9aa71, transparent);
+    }
+
+    .zonas-clasicas {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+    }
+
+    .mapa img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .zonas-nombres {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      margin-bottom: 10px;
+      padding: 0 20px;
+    }
+
+    .zonas-textos {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #c9aa71;
+    }
+
+    .zonas-textos p {
+      width: 22%;
+    }
+
+    .texto-centro {
+      max-width: 600px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #c9aa71;
+    }
+
+    .ciudades-principales {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      font-family: Arial, sans-serif;
+      color: #c9aa71;
+    }
+
+    .ciudad {
+      max-width: 350px;
+    }
+
+    .ciudad img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Mundo / Zonas</h2>
+
+  <div class="botones">
+    <button onclick="location.href='PaginaPrincipal.html'">Pagina Principal</button>
+    <button onclick="location.href='Historia.html'">Historia</button>
+    <button onclick="location.href='Razas.html'">Razas</button>
+    <button onclick="location.href='Clases.html'">Clases</button>
+    <button onclick="location.href='Modos de Juego.html'">Modos de Juego</button>
+    <button onclick="location.href='ZonasMundos.html'">Zonas y Mundos</button>
+    <button onclick="location.href='Expansiones.html'">Expansiones</button>
+  </div>
+
+  <!-- Zonas Clásicas -->
+  <div class="zonas-clasicas">
+    <h3>Zonas Clásicas</h3>
+    <div class="mapa">
+      <img src="ZonasClasicas.png" alt="Mapa Zonas Clásicas" width="300" height="300"/>
+    </div>
+
+    <div class="zonas-nombres">
+      <div>Northrend</div>
+      <div>Kalimdor</div>
+      <div>Pandaria</div>
+      <div>Eastern Kingdoms</div>
+    </div>
+
+    <div class="zonas-textos">
+      <p>Northrend es un continente helado y peligroso, hogar de poderosas criaturas y facciones enemigas.</p>
+      <p>Kalimdor es una vasta tierra que alberga a varias razas con climas diversos.</p>
+      <p>Pandaria ofrece paisajes exuberantes y cultura inspirada en Asia oriental.</p>
+      <p>Eastern Kingdoms es un continente lleno de historia y guerra constante.</p>
+    </div>
+  </div>
+
+  <!-- Zonas Famosas (IMAGEN CENTRADA) -->
+  <div class="zonas-clasicas">
+    <h3>Zonas Famosas</h3>
+    <h3>Tierras de la Peste</h3>
+
+    <img src="TierrasPeste.png" alt="Tierras de la peste" width="300" height="200"
+         style="display:block; margin:20px auto;" />
+
+    <div class="texto-centro">
+      Las Tierras de la Peste son una región devastada por la corrupción y la enfermedad,
+      caracterizada por paisajes desolados y enemigos temibles.
+      Es un lugar clave para muchas misiones y aventuras.
+    </div>
+  </div>
+
+  <!-- Ciudades Principales -->
+  <div class="zonas-clasicas">
+    <h3>Ciudades Principales</h3>
+
+    <div class="ciudades-principales">
+      <div class="ciudad">
+        <h4>Ventormenta</h4>
+        <img src="Vertormenta.png" alt="Ventormenta" width="200" height="300" />
+        <p>Ventormenta es la capital humana y una de las ciudades más grandes y bellas de Azeroth.</p>
+      </div>
+
+      <div class="ciudad">
+        <h4>Orgrimmar</h4>
+        <img src="Orgrimmar.png" alt="Orgrimmar" width="200" height="300" />
+        <p>Orgrimmar es la fortaleza de la Horda, ubicada en Kalimdor.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
