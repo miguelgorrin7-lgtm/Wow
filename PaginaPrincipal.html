@@ -1,70 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <title>Página Principal - WoW Enciclopedia</title>
     <link rel="stylesheet" href="PaginaPrincipal.css">
 </head>
 <body>
-    <h1>Bienvenido a la página  de world of warcraft de Carles y Miguel</h1>
 
-    <buttons>
-
-        <button onclick="location.href='PaginaPrincipal.html'">Pagina Principal</button>
-
-        <button onclick="location.href='Historia.html'">Historia</button>
-
-        <button onclick="location.href='Razas.html'">Razas</button>
-
-        <button onclick="location.href='Clases.html'">Clases</button>
-
-        <button onclick="location.href='Modos de Juego.html'">Modos de Juego</button>
-
-        <button onclick="location.href='ZonasMundos.html'">Zonas y Mundos</button>
-
-        <button onclick="location.href='Expansiones.html'">Expansiones</button>
-
-    </buttons>
-
-    <h2>¿Que es world of warcraft?</h2>
-    <div>
-    <p>World of Warcraft (WoW) es un videojuego de rol multijugador masivo en línea (MMORPG) desarrollado por Blizzard Entertainment y lanzado en 2004. En este juego, los jugadores crean un personaje dentro del mundo ficticio de Azeroth, un universo de fantasía lleno de diferentes razas, clases, regiones y criaturas mágicas. </p>
-
-    
-    <h2>Algunas características clave de WoW:</h2>
-
-    <h3>Razas y facciones: </h3>
-    <p>Los jugadores pueden elegir entre varias razas como humanos, orcos, elfos, enanos, trolls, y otras, que se agrupan en dos grandes facciones enfrentadas: Alianza y Horda.</p>
-
-    <h3>Clases de personajes:</h3>
-    <p>Cada jugador elige una clase (guerrero, mago, sacerdote, pícaro, entre otras) que define sus habilidades y estilo de juego.</p>
-
-    <h3>Exploración y misiones:</h3>
-    <p>El juego tiene un mundo enorme para explorar, con ciudades, mazmorras, y paisajes variados. Los jugadores realizan misiones (quests) para subir de nivel, conseguir equipamiento y avanzar en la historia.
-
-    <h3>Combate:</h3>
-    <p>Combina combate contra enemigos controlados por la computadora (PvE, jugador contra entorno) y contra otros jugadores (PvP, jugador contra jugador).</p>
-
-    <h3>Social y cooperativo:</h3>
-    <p>Los jugadores pueden formar grupos, gremios y participar en incursiones (raids) para enfrentar enemigos muy poderosos juntos.</p>
-
-   <p>WoW es famoso por su historia extensa, su mundo abierto y vivo, y su comunidad activa. A lo largo de los años, ha lanzado múltiples expansiones que agregan nuevas zonas, razas, clases y mecánicas de juego.</p>
+    <div class="music-player">
+        <p>🎵 Tema de Anduin</p>
+        <audio id="musicaFondo" controls loop>
+            <source src="ytmp3free.cc_anduins-theme-world-of-warcraft-the-war-within-2024-epic-version-youtubemp3free.org.mp3" type="audio/mpeg">
+        </audio>
     </div>
-    
 
-    <img src="WoWlogo.webp" alt="Logo de World of Warcraft" width="300" height="200">
-    
-    <br>
+    <script>
+        // Esto le dice a la web: "En cuanto el usuario haga clic en CUALQUIER sitio, dale al Play"
+        document.body.addEventListener('click', function() {
+            var audio = document.getElementById('musicaFondo');
+            if (audio.paused) {
+                audio.play();
+            }
+        }, { once: true }); // El "once" hace que este truco solo se active la primera vez
+    </script>
 
-    <blockquote>“Un mundo MMORPG con más de 20 años de historia”</blockquote>
+    <header class="hero-section">
+        <h1 class="glow-text">World of Warcraft</h1>
+        <h2 class="subtitle">La Enciclopedia Épica de Carles y Miguel</h2>
+    </header>
+
+    <div class="buttons">
+        <button onclick="location.href='PaginaPrincipal.html'">Página Principal</button>
+        <button onclick="location.href='Historia.html'">Historia</button>
+        <button onclick="location.href='Razas.html'">Razas</button>
+        <button onclick="location.href='Clases.html'">Clases</button>
+        <button onclick="location.href='Modos de Juego.html'">Modos de Juego</button>
+        <button onclick="location.href='ZonasMundos.html'">Zonas y Mundos</button>
+        <button onclick="location.href='Expansiones.html'">Expansiones</button>
+    </div>
+
+    <div class="glass-container">
+        <h2 class="gold-title">¿Qué es World of Warcraft?</h2>
+        <p>World of Warcraft (WoW) es un videojuego de rol multijugador masivo en línea (MMORPG) desarrollado por Blizzard Entertainment y lanzado en 2004. En este juego, los jugadores crean un personaje dentro del mundo ficticio de Azeroth, un universo de fantasía lleno de diferentes razas, clases, regiones y criaturas mágicas.</p>
+
+        <h2 class="gold-title">Características Clave</h2>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>⚔️ Razas y Facciones</h3>
+                <p>Elige entre humanos, orcos, elfos, enanos y más, divididos en dos grandes facciones: la noble Alianza y la feroz Horda.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🛡️ Clases de Personajes</h3>
+                <p>Define tu estilo de juego siendo un valiente guerrero, un sabio mago, un sigiloso pícaro o un poderoso sacerdote.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🗺️ Exploración y Misiones</h3>
+                <p>Un mundo enorme para explorar, con ciudades majestuosas, mazmorras oscuras y miles de misiones para forjar tu leyenda.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🤝 Social y Cooperativo</h3>
+                <p>Únete a hermandades, forma grupos y asalta las guaridas de los jefes más temibles de Azeroth junto a tus amigos.</p>
+            </div>
+        </div>
+        
+        <img src="WoWlogo.webp" alt="Logo de World of Warcraft" class="floating-logo">
+        
+        <blockquote class="epic-quote">“Un mundo MMORPG con más de 20 años de historia”</blockquote>
+    </div>
 
     <footer>
         <h3>Contacto</h3>
-        <p>para contactar con nosotros envianos un mensaje a:</p>
-        <p>paginawow@paginawow.es o llamanos al 912 345 678</p>
-        
+        <p>Para contactar con nosotros envíanos un mensaje a:</p>
+        <p>paginawow@paginawow.es | 📞 912 345 678</p>
     </footer>
-</body>
 
+</body>
 </html>

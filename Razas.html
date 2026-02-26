@@ -1,67 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razas de World of Warcraft</title>
     <link rel="stylesheet" href="Razas.css">
+    <style>
+        .music-player { position: fixed; bottom: 20px; right: 20px; background: rgba(11, 15, 20, 0.85); border: 2px solid #d4af37; border-radius: 12px; padding: 10px 15px; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); z-index: 1000; backdrop-filter: blur(5px); text-align: center; transition: transform 0.3s ease; }
+        .music-player:hover { transform: scale(1.05); }
+        .music-player p { color: #d4af37; font-size: 14px; margin-bottom: 8px; font-weight: bold; }
+        .music-player audio { height: 30px; width: 220px; outline: none; }
+    </style>
 </head>
 <body>
-    <h1>Razas de World of Warcraft</h1>
 
-    <buttons>
+    <div class="music-player">
+        <p>🎵 Tema de Anduin</p>
+        <audio id="musicaFondo" controls loop>
+            <source src="ytmp3free.cc_anduins-theme-world-of-warcraft-the-war-within-2024-epic-version-youtubemp3free.org.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script>
+        document.body.addEventListener('click', function() {
+            var audio = document.getElementById('musicaFondo');
+            if (audio.paused) { audio.play(); }
+        }, { once: true });
+    </script>
 
-        <button onclick="location.href='PaginaPrincipal.html'">Pagina Principal</button>
+    <header class="hero-razas">
+        <h1 class="glow-title">Las Razas de Azeroth</h1>
+        <p class="subtitle">Elige a tu pueblo, forja tu destino</p>
+    </header>
 
+    <div class="buttons">
+        <button onclick="location.href='PaginaPrincipal.html'">Página Principal</button>
         <button onclick="location.href='Historia.html'">Historia</button>
-
         <button onclick="location.href='Razas.html'">Razas</button>
-
         <button onclick="location.href='Clases.html'">Clases</button>
-
         <button onclick="location.href='Modos de Juego.html'">Modos de Juego</button>
-
         <button onclick="location.href='ZonasMundos.html'">Zonas y Mundos</button>
-
         <button onclick="location.href='Expansiones.html'">Expansiones</button>
-
-    </buttons>
-<br>
+    </div>
  
- <div class="contenedor">
+    <div class="portales-container">
+        <a href="Alianza.html" class="portal portal-alianza" style="text-decoration: none; color: inherit;">
+            <div class="portal-content">
+                <h2><img src="simbolo-alianza.png" alt="" class="icon-portal"> Alianza</h2>
+                <p>Humano, Enano, Elfo de la noche, Gnomo, Draenei, Worgen</p>
+                <span class="btn-entrar">Explorar Alianza</span>
+            </div>
+        </a>
 
-    <div class="fila">
-        <div class="info">
-            <h2>Alianza</h2>
-         
-            <p>Humano, Enano, Elfo de la noche, Gnomo, Draenei, Worgen</p>
-            
-        </div>
-        <button onclick="location.href='Alianza.html'">Alianza</button>
+        <a href="Horda.html" class="portal portal-horda" style="text-decoration: none; color: inherit;">
+            <div class="portal-content">
+                <h2><img src="simbolo-horda.png" alt="" class="icon-portal"> Horda</h2>
+                <p>Orco, No-muerto, Tauren, Trol, Elfo de sangre, Goblin</p>
+                <span class="btn-entrar">Explorar Horda</span>
+            </div>
+        </a>
+
+        <a href="RazasAliadas.html" class="portal portal-aliadas" style="text-decoration: none; color: inherit;">
+            <div class="portal-content">
+                <h2><img src="simbolo-aliadas.png" alt="" class="icon-portal"> Razas Aliadas</h2>
+                <p>Vulpera, Mecagnomo, Elfos del Vacío, Zandalari y más...</p>
+                <span class="btn-entrar">Descubrir Aliados</span>
+            </div>
+        </a>
     </div>
 
-    <div class="fila">
-        <div class="info">
-            <h2>Horda</h2>
-            <p>Orco, No-muerto, Tauren, Trol, Elfo de sangre, Goblin</p>
-        </div>
-        <button onclick="location.href='Horda.html'">Horda</button>
-    </div>
-
-    <div class="fila">
-        <div class="info">
-            <h2>Razas aliadas</h2>
-            <p>Vulpera, Mecagnomo, Elfos del Vacío, Zandalari</p>
-        </div>
-        <button onclick="location.href='RazasAliadas.html'">Razas aliadas</button>
-    </div>
-
-</div>
     <footer>
         <h3>Contacto</h3>
-        <p>para contactar con nosotros envianos un mensaje a:</p>
-        <p>paginawow@paginawow.es o llamanos al 912 345 678</p>
-        
+        <p>Para contactar con nosotros envíanos un mensaje a:</p>
+        <p>paginawow@paginawow.es o llámanos al 912 345 678</p>
     </footer>
 </body>
 </html>

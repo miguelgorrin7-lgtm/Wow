@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <title>Razas Aliadas</title>
     <link rel="stylesheet" href="RazasAliadas.css">
+    <style>
+        .music-player { position: fixed; bottom: 20px; right: 20px; background: rgba(11, 15, 20, 0.85); border: 2px solid #d4af37; border-radius: 12px; padding: 10px 15px; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); z-index: 1000; backdrop-filter: blur(5px); text-align: center; transition: transform 0.3s ease; }
+        .music-player:hover { transform: scale(1.05); }
+        .music-player p { color: #d4af37; font-size: 14px; margin-bottom: 8px; font-weight: bold; }
+        .music-player audio { height: 30px; width: 220px; outline: none; }
+    </style>
 </head>
 <body>
 
-    <h1>Razas Aliadas</h1>
+    <div class="music-player">
+        <p>🎵 Tema de Anduin</p>
+        <audio id="musicaFondo" controls loop>
+            <source src="ytmp3free.cc_anduins-theme-world-of-warcraft-the-war-within-2024-epic-version-youtubemp3free.org.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script>
+        document.body.addEventListener('click', function() {
+            var audio = document.getElementById('musicaFondo');
+            if (audio.paused) { audio.play(); }
+        }, { once: true });
+    </script>
+
+    <header class="hero-aliadas">
+        <h1>Razas Aliadas</h1>
+        <p class="subtitle">Nuevas fuerzas se unen a la batalla</p>
+    </header>
 
     <div class="buttons">
-        <button onclick="location.href='PaginaPrincipal.html'">Pagina Principal</button>
+        <button onclick="location.href='PaginaPrincipal.html'">Página Principal</button>
         <button onclick="location.href='Historia.html'">Historia</button>
         <button onclick="location.href='Razas.html'">Razas</button>
         <button onclick="location.href='Clases.html'">Clases</button>
@@ -21,105 +43,85 @@
 
     <div class="contenedor">
 
-        <!-- ALIANZA -->
+        <h2 class="faction-title title-alianza">
+            <img src="simbolo-alianza.png" alt="Alianza" class="icon-title"> Aliados de la Alianza
+        </h2>
 
-        <div class="fila izquierda">
-            <img src="elfo-vacio.png" alt="Elfo del Vacío">
+        <div class="fila izquierda ali-alianza">
+            <img src="elfo-vacio.png" alt="Elfo del Vacío" class="raza-img">
             <div class="info">
                 <h3>Elfos del Vacío</h3>
-                <p>
-                    Exiliados que dominan las energías del Vacío sin sucumbir a la locura.
-                    Son una fuerza misteriosa dentro de la Alianza.
-                </p>
+                <p>Exiliados que dominan las energías del Vacío sin sucumbir a la locura. Son una fuerza misteriosa dentro de la Alianza.</p>
             </div>
         </div>
 
-        <div class="fila derecha">
-            <img src="forjado-luz.png" alt="Draenei Forjado por la Luz">
+        <div class="fila derecha ali-alianza">
+            <img src="forjado-luz.png" alt="Draenei Forjado por la Luz" class="raza-img">
             <div class="info">
                 <h3>Draenei Forjados por la Luz</h3>
-                <p>
-                    Guerreros bendecidos directamente por la Luz Sagrada,
-                    con cuerpos marcados por milenios de guerra contra la Legión.
-                </p>
+                <p>Guerreros bendecidos directamente por la Luz Sagrada, con cuerpos marcados por milenios de guerra contra la Legión.</p>
             </div>
         </div>
 
-        <div class="fila izquierda">
-            <img src="enano-hierro-negro.png" alt="Enano Hierro Negro">
+        <div class="fila izquierda ali-alianza">
+            <img src="enano-hierro-negro.png" alt="Enano Hierro Negro" class="raza-img">
             <div class="info">
                 <h3>Enanos Hierro Negro</h3>
-                <p>
-                    Maestros del fuego y la forja, antaño enemigos,
-                    ahora aliados poderosos de la Alianza.
-                </p>
+                <p>Maestros del fuego y la forja, antaño enemigos, ahora aliados poderosos de la Alianza.</p>
             </div>
         </div>
 
-        <div class="fila derecha">
-            <img src="kultiranos.png" alt="Humano Kultirano">
+        <div class="fila derecha ali-alianza">
+            <img src="kultiranos.png" alt="Humano Kultirano" class="raza-img">
             <div class="info">
                 <h3>Humanos Kultiranos</h3>
-                <p>
-                    Marineros y guerreros de gran tamaño provenientes de Kul Tiras,
-                    expertos en combate naval y druidismo ancestral.
-                </p>
+                <p>Marineros y guerreros de gran tamaño provenientes de Kul Tiras, expertos en combate naval y druidismo ancestral.</p>
             </div>
         </div>
 
-        <!-- HORDA -->
+        <h2 class="faction-title title-horda">
+            <img src="simbolo-horda.png" alt="Horda" class="icon-title"> Aliados de la Horda
+        </h2>
 
-        <div class="fila izquierda">
-            <img src="orco-maghar.png" alt="Orco Mag'har" width="300" height="300">
+        <div class="fila izquierda ali-horda">
+            <img src="orco-maghar.png" alt="Orco Mag'har" class="raza-img">
             <div class="info">
                 <h3>Orcos Mag'har</h3>
-                <p>
-                    Orcos no corrompidos provenientes de Draenor alternativo,
-                    orgullosos y fieles a sus tradiciones.
-                </p>
+                <p>Orcos no corrompidos provenientes de Draenor alternativo, orgullosos y fieles a sus tradiciones.</p>
             </div>
         </div>
 
-        <div class="fila derecha">
-            <img src="tauren-montealto.png" alt="Tauren Monte Alto">
+        <div class="fila derecha ali-horda">
+            <img src="tauren-montealto.png" alt="Tauren Monte Alto" class="raza-img">
             <div class="info">
                 <h3>Tauren de Monte Alto</h3>
-                <p>
-                    Guardianes de las montañas con astas majestuosas,
-                    descendientes del héroe Huln Monte Alto.
-                </p>
+                <p>Guardianes de las montañas con astas majestuosas, descendientes del héroe Huln Monte Alto.</p>
             </div>
         </div>
 
-        <div class="fila izquierda">
-            <img src="trol-zandalari.png" alt="Trol Zandalari">
+        <div class="fila izquierda ali-horda">
+            <img src="trol-zandalari.png" alt="Trol Zandalari" class="raza-img">
             <div class="info">
                 <h3>Troles Zandalari</h3>
-                <p>
-                    La civilización trol más antigua y avanzada,
-                    con poderosos vínculos con los Loa.
-                </p>
+                <p>La civilización trol más antigua y avanzada, con poderosos vínculos con los Loa.</p>
             </div>
         </div>
 
-        <div class="fila derecha">
-            <img src="vulpera.png" alt="Vulpera">
+        <div class="fila derecha ali-horda">
+            <img src="vulpera.png" alt="Vulpera" class="raza-img">
             <div class="info">
                 <h3>Vulpera</h3>
-                <p>
-                    Nómadas astutos del desierto de Vol'dun,
-                    expertos en supervivencia y comercio.
-                </p>
+                <p>Nómadas astutos del desierto de Vol'dun, expertos en supervivencia y comercio.</p>
             </div>
         </div>
 
     </div>
-</div>
+
     <footer>
         <h3>Contacto</h3>
-        <p>para contactar con nosotros envianos un mensaje a:</p>
-        <p>paginawow@paginawow.es o llamanos al 912 345 678</p>
-        
+        <p>Para contactar con nosotros envíanos un mensaje a:</p>
+        <p>paginawow@paginawow.es o llámanos al 912 345 678</p>
     </footer>
+
 </body>
 </html>

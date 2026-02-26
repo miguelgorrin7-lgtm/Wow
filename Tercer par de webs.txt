@@ -1,0 +1,3 @@
+https://github.com/miguelgorrin7-lgtm/Wow
+
+lo que tienes que corregir es: Expansiones.html ZonasMundos.html Expansiones.css y ZonasMundos.css
