@@ -13,6 +13,19 @@
     </style>
 </head>
 <body>
+    <div class="music-player">
+        <p>🎵 Tema de Anduin</p>
+        <audio id="musicaFondo" controls loop>
+            <source src="ytmp3free.cc_anduins-theme-world-of-warcraft-the-war-within-2024-epic-version-youtubemp3free.org.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script>
+        document.body.addEventListener('click', function() {
+            var audio = document.getElementById('musicaFondo');
+            if (audio.paused) { audio.play(); }
+        }, { once: true });
+    </script>
+    
     <h1>Personajes Emblemáticos</h1>
 
     <div class="buttons">
